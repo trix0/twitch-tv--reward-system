@@ -1,0 +1,16 @@
+{
+  "name": "getcases",
+  "version": "1.0.0",
+  "description": "get cases from database",
+  "main": "get_cases.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "trixo",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "http": "0.0.0",
+    "xhr-request": "^1.0.1"
+  }
+}

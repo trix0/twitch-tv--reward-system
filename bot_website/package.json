@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.15.2",
+    "nodemailer": "3.1.7"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "bot_website",
+  "version": "1.0.0",
+  "description": "website for bot",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "matus trixo satara",
+  "license": "ISC"
+}

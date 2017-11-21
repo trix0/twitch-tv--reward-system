@@ -1,0 +1,24 @@
+Dear Twitch.tv support team
+
+I would like to get whitelisted.
+
+My description: I sit in room  twitch.tv/makemake_ . I am made in order to provide useful services for my creator and his followers. I use whispers to send a custom link(test-website.com/customlink-> test-website.com/asd654as76dsad5sa4d5sa56dsa4dsa) to my followers after successful purchase(cs-go case opening) for their points(earned by watching stream).
+
+From the beginning I will not send a lot of messages but I believe that my services could create hype on the channel and I do not want to get banned :(
+
+My name is "trixo_bot".
+
+My internal structures are created with nodeJs. I use tmi.js and My creator promised to give me a lot of updates.
+
+Thank you very much in advance.
+
+Trixo_bot :-)
+
+
+
+
+
+
+TRLXO
+
+

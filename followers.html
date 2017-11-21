@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+var aNewFollowerList=[ 
+  'yopqo',
+  'kahayag',
+  'zachrancatv',
+  'faun3007',
+  'gabrielka_32',
+  'rdocm',
+  'pepsijebordel',
+  'patrikos666',
+  'domik53xd',
+  'alexinho_svk',
+  'outboundtax34439',
+  'davidko1123',
+  'drbosk',
+  'autistafofko',
+  'simoncahoj',
+  'mirkodust9',
+  'tachyon4',
+  'turtlespurples',
+  'rejdoou',
+  'clumsyteddybear',
+  'lisiacik123',
+  'nigasgang',
+  'tupec2212',
+  'dalko_svk',
+  'gurus15',
+  'thegangasyt',
+  'sparo_d',
+  'botis55',
+  'pr0vos',
+  'radiss_77',
+  'dominikbartos',
+  'gulynko',
+  'mnemuk24',
+  'suffone',
+  'subaruismylife',
+  'jurajqo123',
+  'pan2001',
+  'monkey178official',
+  'oimaov2',
+  'kolac_nou_fejk',
+  'yesko3',
+  'kikorada',
+  'nasyna',
+  '09kost09',
+  'pan_medvidek',
+  'fifogametv',
+  'florianoksd',
+  'erkkokiller',
+  'waziicek',
+  'thehardric',
+  'feelsshark',
+  'jakubcooler1',
+  'barkerino76',
+  'imichalk',
+  'lllritualgameslll',
+  'kubes2365',
+  'casper_28',
+  'ezisfoglalt',
+  'legendaris4',
+  'adrianasvk',
+  'h1benny',
+  'lenuliq777',
+  '4mazonis',
+  '0_cyr3x_0',
+  'picnyvytok123',
+  'backucc',
+  'arradiel2',
+  'starkills21',
+  'pa3k791',
+  'smilleyko',
+  'skila18',
+  'lakiluk157',
+  'r_kd0',
+  'raidenxxlead',
+  'nuri689',
+  'ahorben',
+  'trolic18',
+  'ianniscz',
+  'didlifon',
+  'tomik28',
+  're4zon',
+  'hydral1',
+  'vallran_',
+  'nate_svk',
+  'rastiiiiiiik',
+  'hacemos',
+  'poligon133',
+  'cigisvk',
+  'yoloalcatraz',
+  'denko111111',
+  'trlxo',
+  'denisjr111',
+  'trix321',
+  'romanholahlavamoravcik',
+  'jassebiie',
+  'zipko123123',
+  'michael31900',
+  'mino_2',
+  'ramonbengal1995',
+  'gago75',
+  'blekdeni',
+  'qweeecko',
+  'joki_ir',
+  'rolandiik',
+  'kikoss_sk',
+  'milfo12',
+  's1mplz',
+  'arciusko',
+  'matuuuus',
+  'epikos123',
+  'haribko11' ];
+
+var iCounter=0;
+var i=aNewFollowerList.length-1;
+var string;
+
+
+  var sql="INSERT INTO `users`(`twitch_id`, `twitch_name`, `follow_date`, `points`, `points_spend`, `is_subscriber`, `is_follower`, `steam_id`, `minutes_watched`) VALUES ({{twitch_id}},'{{twitch_name}}','2017-06-07',100,0,0,1,'',0);";
+   
+var interval=setInterval(function(){
+fnCreateSql();
+
+},500);
+
+
+function fnCreateSql(){
+
+    var returnSql=sql;
+    //console.log(aNewFollowerList[i]);
+    var sUrl="https://api.twitch.tv/kraken/users?login="+aNewFollowerList[i]+"&client_id=23yai1ktgs6slqezfq88sqqrixjn77";
+  var misko = {
+    url: sUrl,
+    method: 'GET',
+    headers: {      
+      'Client-ID': "23yai1ktgs6slqezfq88sqqrixjn77",
+      'Accept': 'application/vnd.twitchtv.v5+json'
+    }
+  };
+  $.getJSON( misko , function( jData ){
+    console.log(jData);
+    iCounter++;
+    // console.log(jData);
+    // console.log(aNewFollowerList[iCounter]);
+    returnSql=returnSql.replace("{{twitch_id}}", jData.users[0]._id);
+    returnSql=returnSql.replace("{{twitch_name}}", aNewFollowerList[i+1]);
+    string=string+returnSql;
+   console.log("_________________________________________________________________")
+
+    console.log(string);
+    if(aNewFollowerList[i]=="yopqo"){
+      clearInterval(interval);
+    }
+    });
+
+  i--;
+  }
+</script>
+</body>
+</html>
